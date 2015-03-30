@@ -28,7 +28,7 @@ add_filter('widget_text', 'do_shortcode');//Allows shortcodes to be put into wid
 	wp_enqueue_style( $handle, $src, $deps, $ver, $media );
         
         function joe_form_scripts() {
-            wp_enqueue_script( 'joe_form_js', JOE_SHORTCODES_URL . '/js/joe_form.js', array(), $ver, false );
+            wp_enqueue_script( 'joe_form_js', JOE_FORM_URL . 'js/joe_form.js', array(), $ver, false );
             //wp_enqueue_script( 'angularjs_js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js', array(), $ver, false );
         }
 
@@ -38,6 +38,8 @@ require_once('class/joe_form.php');
 
 add_shortcode('main_form', 'main_form');
 function main_form($args = array()){
+    $joe_form = new joe_form();    
+    $programs = $joe_form->programList();
 	ob_start();
 		include('pgs/main_form.php');
 	return ob_get_clean();

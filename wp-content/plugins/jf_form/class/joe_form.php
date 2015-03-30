@@ -17,14 +17,14 @@ class joe_form{
 
 		public function programList(){
 			$list = array(
-				"Drug and Alcohol Counseling",
-				"Drug and Alcohol Counseling Online",
-				"Admin & Clinical Medical Assistant",
-				"Administrative Medical Assistant",
-				"Clinical Medical Assistant",
-				"Computerized Office & Accounting",
-				"Pharmacy Technician",
-				"Pharmacy Technician Online",
+				"1"=>"Drug and Alcohol Counseling",
+				"2"=>"Drug and Alcohol Counseling Online",
+				"3"=>"Admin & Clinical Medical Assistant",
+				"31"=>"Administrative Medical Assistant",
+				"32"=>"Clinical Medical Assistant",
+				"5"=>"Computerized Office & Accounting",
+				"7"=>"Pharmacy Technician",
+				"8"=>"Pharmacy Technician Online",
 			);
 			
 			return $list;

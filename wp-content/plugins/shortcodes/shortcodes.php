@@ -17,20 +17,38 @@ add_filter('widget_text', 'do_shortcode');//Allows shortcodes to be put into wid
 
 	define('JOE_SHORTCODES_URL', plugin_dir_url(__FILE__));
 	define('JOE_SHORTCODES_PATH', plugin_dir_path(__FILE__));
+        
+        // Mobile DETECTION
+        require_once 'class/Mobile_Detect.php';
+        $detect = new Mobile_Detect;
+        if ( $detect->isMobile() ) { // Is a Mobile Device
+            if( $detect->isTablet() ){// Any tablet device.
+                define('USER_DEVICE', 'TABLET');
+            }else{ // is a Phone
+                define('USER_DEVICE', 'PHONE');
+            }   
+        }else{ // is not a Mobile Device
+                define('USER_DEVICE', 'COMPUTER');
+        }// end if is a mobile device
 
 	$ver = rand(1, 10);
 	//wp_register_script( 'joe_short_scripts' , JOE_SHORTCODES_URL.'js/joe_shortcodes.js', array('jquery'), $ver );
 	//wp_enqueue_script( 'joe_short_scripts', array('jquery') );
 
 	$handle = 'joe_shortcode_style';
-	$src = JOE_SHORTCODES_URL.'css/joe_shortcodes.css';
+        if(USER_DEVICE == 'PHONE'){
+            $src = JOE_SHORTCODES_URL.'css/joe_shortcodes_mobile.css';
+        }else{
+            $src = JOE_SHORTCODES_URL.'css/joe_shortcodes.css';
+        }
+	
 	$deps = '';
 	$ver = rand(1, 10);
 	$media = 'all';
 	wp_enqueue_style( $handle, $src, $deps, $ver, $media );
         
         function joe_shortcode_scripts() {
-            wp_enqueue_script( 'joe_short_js', JOE_SHORTCODES_URL . '/js/joe_shortcodes.js', array(), $ver, false );
+            wp_enqueue_script( 'joe_short_js', JOE_SHORTCODES_URL . 'js/joe_shortcodes.js', array(), $ver, false );
             wp_enqueue_script( 'angularjs_js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js', array(), $ver, false );
         }
 
