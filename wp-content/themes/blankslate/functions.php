@@ -64,11 +64,3 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
-
-function site_scripts() {
-	//wp_enqueue_style( 'healthstaff_styles', get_stylesheet_uri() );
-        wp_enqueue_style('nuovometo_css', get_template_directory_uri().'/css/nuovometo.css');
-	wp_enqueue_script( 'nuovometo_js', get_template_directory_uri() . '/js/nuovometo.js', array(), '1.0.0', false );
-}
-
-add_action( 'wp_enqueue_scripts', 'site_scripts' );

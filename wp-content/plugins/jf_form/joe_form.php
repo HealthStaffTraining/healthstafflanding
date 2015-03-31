@@ -45,6 +45,13 @@ function main_form($args = array()){
 	return ob_get_clean();
 }
 
-
+add_shortcode('form_cgi', 'form_cgi');
+function form_cgi($args = array()){
+    $joe_form = new joe_form();    
+    foreach($_POST AS $key => $value){
+        echo $key." = ". $value . "<br>";
+        
+    }
+}
 
 ?>

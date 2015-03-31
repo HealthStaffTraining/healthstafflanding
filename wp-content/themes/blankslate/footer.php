@@ -1,11 +1,18 @@
 <div class="clear"></div>
 </div>
-<footer id="footer" role="contentinfo">
-    <div id="copyright">
-        <?php echo sprintf(__('%1$s %2$s %3$s. All Rights Reserved.', 'blankslate'), '&copy;', date('Y'), esc_html(get_bloginfo('name')));
-        echo sprintf(__(' Theme By: %1$s.', 'blankslate'), '<a href="http://tidythemes.com/">TidyThemes</a>'); ?>
+<div id="footer">
+    <div id="site_contain" style="height: 105px;">
+        <div id="left_side">
+                <?php echo sprintf(__('%1$s %2$s %3$s. <br>All Rights Reserved.', 'blankslate'), '&copy;', date('Y'), esc_html(get_bloginfo('name')));?>
+        </div>
+        <div id="middle_side">
+            Corporate Office/Main Campus<br>28671 Calle Cortez Suite F<br>Temecula, CA 92590
+        </div>
+        <div id="right_side">
+            phone<br><span class="phone_number">951-694-4784</span>
+        </div>
     </div>
-</footer>
+</div>
 </div>
 <?php wp_footer(); ?>
 </body>

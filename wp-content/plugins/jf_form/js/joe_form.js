@@ -3,6 +3,7 @@ function checkForm(){
     jQuery("#joe_form_err").hide();
     jQuery("input").css("border","0px");
     jQuery("#joe_form_select").css("border", "0px solid red");
+    jQuery('input[type="submit"]').attr('disabled','disabled');
     var firstName = jQuery("#firstName").val();
     var lastName = jQuery("#lastName").val();
     var email = jQuery("#email").val();
@@ -32,7 +33,10 @@ function checkForm(){
     }
     if(err == "fail"){
         jQuery("#joe_form_err").show();
-        jQuery("#joe_form_err").text("There is a problem with the following field(s)")
+        jQuery("#joe_form_err").text("There is a problem with the following field(s)");
+        jQuery('input[type="submit"]').removeAttr('disabled');
+    }else{
+        return true;
     }
     //jQuery(".submit_form").css("background-color","#92cd1a");
     return false;
