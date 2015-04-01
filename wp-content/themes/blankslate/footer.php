@@ -1,7 +1,7 @@
 <div class="clear"></div>
 </div>
 <div id="footer">
-    <div id="site_contain" style="height: 105px;">
+    <div id="site_contain" class="footheight">
         <div id="left_side">
                 <?php echo sprintf(__('%1$s %2$s %3$s. <br>All Rights Reserved.', 'blankslate'), '&copy;', date('Y'), esc_html(get_bloginfo('name')));?>
         </div>

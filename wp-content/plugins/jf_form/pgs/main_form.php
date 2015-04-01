@@ -1,4 +1,5 @@
 <div id="joe_form_contain">
+    <div id="joe_form_mobile">
     <form method="post" action="/form_cgi/" onsubmit="return checkForm()">
         <div class="joe_form_title"></div>
         <div id="joe_form_err" style="display: none;"></div>
@@ -33,4 +34,5 @@
             <input type="submit" name="submit" id="submit" value="Submit Form" class="submit_button">
         </div>
     </form>
+    </div>
 </div>
