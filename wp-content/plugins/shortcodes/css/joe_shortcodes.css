@@ -13,6 +13,12 @@ img {border: 0px;}
 
 b {font-weight: bold;}
 
+#site_container{
+    position: realtive;
+    width: 100%;
+    margin: 0px auto 0px auto;
+}
+
 #logo_area{
     background-color: white;
     position: relative;

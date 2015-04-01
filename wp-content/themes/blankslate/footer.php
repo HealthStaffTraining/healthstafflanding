@@ -1,5 +1,4 @@
 <div class="clear"></div>
-</div>
 <div id="footer">
     <div id="site_contain" class="footheight">
         <div id="left_side">

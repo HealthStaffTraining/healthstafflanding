@@ -5,12 +5,14 @@
  *
  */
 get_header(); ?> 
-    <div id="wrapper" class="hfeed">
+<div id="site_container">
             <div id="logo_area">
                 <div id="site_contain">
                     <a href="/"><img src="/wp-content/themes/blankslate/images/logo.png" width="214" height="54" class="logo"></a><img src="/wp-content/themes/blankslate/images/drug_text.png" width="196" height="58" class="drug_text">
                     <div id="phone_area">
+                        <div id="phone_area_m">
                         Phone<br><span class="phone_number">951-694-4784</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,6 +21,8 @@ get_header(); ?>
                     <div id="hero_img"><?php 
                     if(USER_DEVICE != 'PHONE'){
                         echo do_shortcode( '[main_form]' );
+                    }else{
+                        echo '<img src="/wp-content/themes/blankslate/images/hero_m.jpg" class="hero_m_image">';
                     }
                     ?></div>
                 </div>
@@ -43,7 +47,6 @@ get_header(); ?>
                     <h1><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div id="container">
                         <div id="site_contain">
                              <?php 
                             if(USER_DEVICE != 'PHONE'){
@@ -53,11 +56,13 @@ get_header(); ?>
                             }
                             ?>
                             <div id="content_contain">
+                                <div id="content_mobile">
                                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                 <?php the_content(); ?>
                                 <?php endwhile; else : ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                                 <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                 <div id="footer_bar_area">
