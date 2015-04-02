@@ -47,11 +47,64 @@ function main_form($args = array()){
 
 add_shortcode('form_cgi', 'form_cgi');
 function form_cgi($args = array()){
-    $joe_form = new joe_form();    
+    $joe_form = new joe_form();  
     foreach($_POST AS $key => $value){
-        echo $key." = ". $value . "<br>";
+        //echo $key." = ". $value . "<br>";
         
     }
+        ob_start();
+        if( strlen($_POST['ddlprogram']) > 0 ){
+                $programs = $joe_form->programList();
+                $program_description = "See Program ID";
+                foreach($programs AS $key=>$value){
+                    if($key == trim($_POST['ddlprogram'])){
+                        $program_description = $value;
+                        break;
+                    }
+                    
+                }
+    			GLOBAL $wpdb;
+			$wpdb->insert(
+				'joe_form',
+				array(
+					'first_name' => $_POST['firstName'],
+					'last_name'=>$_POST['lastName'],
+					'email'=>$_POST['email'],
+					'phone'=>$_POST['phone'],
+					'program_id'=>$_POST['ddlprogram'],
+                                        'program'=>$program_description
+				),
+				array(
+					'%s',
+					'%s',
+					'%s',
+					'%s',
+					'%s',
+                                        '%s'
+				)
+			);
+			$insert_id = $wpdb->insert_id;
+                        $to = 'kim.e@healthstafftraining.com, ebrodie@nuovometo.com, jfitzgerald@nuovometo.com';
+                        $subject = 'A lead has been captured';
+                        $message = 'The information captured is:\r\n';
+                        $message.= 'First Name: '.$_POST['firstName'].'\r\n';
+                        $message.= 'Last Name: '.$_POST['lastName'].'\r\n';
+                        $message.= 'Email Address: '.$_POST['email'].'\r\n';
+                        $message.= 'Phone Number: '.$_POST['phone'].'\r\n';
+                        $message.= 'Program: ('.$_POST['ddlprogram'].') '.$program_description.'\r\n';
+                        $headers = 'From: webmaster@healthstafftraining.com' . "\r\n" .
+                        'Reply-To: webmaster@healthstafftraining.com' . "\r\n" .
+                        'X-Mailer: PHP/' . phpversion();
+
+                        mail($to, $subject, $message, $headers);
+        }
+            //kim.e@healthstafftraining.com
+            header("Location: /thank-you", true, 301);
+            exit();
+	ob_end_flush();
 }
+
+
+
 
 ?>

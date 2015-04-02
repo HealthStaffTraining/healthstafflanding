@@ -4,13 +4,13 @@
         <div class="joe_form_title"></div>
         <div id="joe_form_err" style="display: none;"></div>
         <div id="joe_form_row">
-            <input type="text" name="firstName" id="firstName" size="10" value="First Name" maxlength="20" onclick="clearFields(this)" onblur="repopulate(this,'First Name')" onkeyup="fillFields(this)">
+            <input type="text" name="firstName" id="firstName" size="10" value="First Name" maxlength="50" onclick="clearFields(this)" onblur="repopulate(this,'First Name')" onkeyup="fillFields(this)">
         </div>
         <div id="joe_form_row">
-            <input type="text" name="lastName" id="lastName" size="10" value="Last Name" maxlength="20" onclick="clearFields(this)" onblur="repopulate(this,'Last Name')">
+            <input type="text" name="lastName" id="lastName" size="10" value="Last Name" maxlength="50" onclick="clearFields(this)" onblur="repopulate(this,'Last Name')">
         </div>
         <div id="joe_form_row">
-            <input type="text" name="email" id="email" size="10" value="Email" maxlength="20" onclick="clearFields(this)" onblur="repopulate(this,'Email')">
+            <input type="text" name="email" id="email" size="10" value="Email" maxlength="100" onclick="clearFields(this)" onblur="repopulate(this,'Email')">
         </div>
         <div id="joe_form_row">
             <input type="text" name="phone" id="phone" size="10" value="Phone" maxlength="20" onclick="clearFields(this)" onblur="repopulate(this,'Phone')" onkeyup="formatPhoneNum(this,'-','no')">
