@@ -86,13 +86,15 @@ function form_cgi($args = array()){
 			$insert_id = $wpdb->insert_id;
                         $to = 'kim.e@healthstafftraining.com, ebrodie@nuovometo.com, jfitzgerald@nuovometo.com';
                         $subject = 'A lead has been captured';
-                        $message = 'The information captured is:\r\n';
-                        $message.= 'First Name: '.$_POST['firstName'].'\r\n';
-                        $message.= 'Last Name: '.$_POST['lastName'].'\r\n';
-                        $message.= 'Email Address: '.$_POST['email'].'\r\n';
-                        $message.= 'Phone Number: '.$_POST['phone'].'\r\n';
-                        $message.= 'Program: ('.$_POST['ddlprogram'].') '.$program_description.'\r\n';
-                        $headers = 'From: webmaster@healthstafftraining.com' . "\r\n" .
+                        $message = 'The information captured is:<br>';
+                        $message.= 'First Name: '.$_POST['firstName'].'<br>';
+                        $message.= 'Last Name: '.$_POST['lastName'].'<br>';
+                        $message.= 'Email Address: '.$_POST['email'].'<br>';
+                        $message.= 'Phone Number: '.$_POST['phone'].'<br>';
+                        $message.= 'Program: ('.$_POST['ddlprogram'].') '.$program_description.'<br>';
+                        $headers  = 'MIME-Version: 1.0' . "\r\n";
+                        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                        $headers .= 'From: webmaster@healthstafftraining.com' . "\r\n" .
                         'Reply-To: webmaster@healthstafftraining.com' . "\r\n" .
                         'X-Mailer: PHP/' . phpversion();
 
