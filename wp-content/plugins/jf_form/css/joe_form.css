@@ -1,3 +1,8 @@
+form{
+    padding: 0px;
+    margin: 0px;
+}
+
 #joe_form_contain{
     position: absolute;
     bottom: 0px;
@@ -78,4 +83,69 @@
     color: #92cd1a;
     padding: 0px 0px 10px 0px;
     text-align: center;
+}
+
+#joe_bare_form_contain{
+    position: relative;
+    background-color: #0583b6;
+    width: 100%;
+    padding: 30px 0px 5px 0px;
+    margin: 0px;
+}
+
+.joe_bare_form_title{
+    position: relative;
+    width: 220px;
+    height: 24px;
+    background: url(../images/get_info.gif);
+    background-repeat: no-repeat;
+    margin: 0px 0px 30px 30px;
+}
+
+#joe_bare_form_row{
+    width: 100%; 
+    position: relative; 
+    text-align: left;
+    padding: 0px;
+    margin: 0px 0px 10px 30px;
+}
+
+#joe_bare_form_row input{
+    width: 270px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px 0px 15px 15px;
+    border: 0px;
+    color: #999999;
+    font-size: 1em;
+    
+}
+
+#joe_bare_form_select{
+    overflow:hidden; /* this hides the select's drop button */
+    padding:0; 
+    margin:0; 
+    /*background: white url(formelements-select.png) no-repeat bottom right;
+     this is the new drop button, in image form */
+    background: white url(../images/select.gif);
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    width:285px; 
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
+    border: solid 0px #ccc;
+}
+
+#joe_bare_form_select select{
+    width:285px /* this percentage effectively extends the drop down button out of view */; 
+    background-color:transparent /* this hides the select's background making any styling visible from the div */; 
+    background-image:none; 
+    -webkit-appearance: none /* this is required for Webkit browsers */; 
+    border:none; 
+    box-shadow:none; 
+    padding: 15px 0px 15px 15px; /* padding should be added to the select, not the div */
+    color: #999999;
+    font-size: 1em;
 }

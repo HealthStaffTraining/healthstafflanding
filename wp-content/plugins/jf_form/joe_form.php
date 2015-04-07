@@ -45,6 +45,15 @@ function main_form($args = array()){
 	return ob_get_clean();
 }
 
+add_shortcode('bare_form', 'bare_form');
+function bare_form($args = array()){
+    $joe_form = new joe_form();    
+    $programs = $joe_form->programList();
+	ob_start();
+		include('pgs/stripped_form.php');
+	return ob_get_clean();
+}
+
 add_shortcode('form_cgi', 'form_cgi');
 function form_cgi($args = array()){
     $joe_form = new joe_form();  
