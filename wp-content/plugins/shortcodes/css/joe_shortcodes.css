@@ -25,7 +25,12 @@ b {font-weight: bold;}
     height: 95px;
 }
 
-.logo{margin: 20px 20px 0px 90px;}
+.logo
+{
+    width: 214px;
+    height: 54px;
+    margin: 20px 20px 0px 90px;
+}
 
 #site_contain
 {

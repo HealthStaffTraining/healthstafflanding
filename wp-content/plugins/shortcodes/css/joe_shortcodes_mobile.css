@@ -23,11 +23,15 @@ b {font-weight: bold;}
     background-color: white;
     position: relative;
     width:100%;
-    height: 134px;
     background-color: #fff;
 }
 
-.logo{margin: 20px 20px 0px 30px;}
+.logo
+{
+    width: 150px;
+    height: 38px;
+    margin: 10px 20px 0px 20px;
+}
 
 .drug_text{display: none;}
 
@@ -306,50 +310,56 @@ b {font-weight: bold;}
 #aboutUs_btn{
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
     cursor: pointer;
     border: 2px solid #0583b6;
-    border-radius: 25px 25px 25px 25px;
-    width: 110px;
-    height: 45px;
-    line-height: 45px;
+    border-radius: 20px 20px 20px 20px;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     color: #0583b6;
-    font-size: 0.9em;
+    font-size: 0.7em;
     
 }
 
 #alt_site_contain{
     position: relative;
-    width: 1149px;
+    width: 100%;
     margin: 0px auto 0px auto;
 }
 
 #alt_hero_area{
-    width:1149px; 
+    width:100%; 
     position: relative;
     margin: 0px auto 0px auto;
-    height:288px;
-    background-image: url(../../../themes/blankslate/images/hdr_medical_assist.jpg);
-    background-repeat: no-repeat;
     border-color: #f1f1f1;
     border-style: solid;
-    border-width: 2px 0px 0px 0px;
+    border-width: 0px 0px 0px 0px;
+    white-space: nowrap;
+
+}
+
+.alt_hero_img{
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
 }
 
 #alt_hero_img{
     position: relative;
-    width: 1149px;
-    height: 288px;
-    background-image: url(../../../themes/blankslate/hdr_medical_assist.jpg);
+    width: 100%;
+    /*height: 262px;*/
+    background-image: url(../../../themes/blankslate/hdr_medical_assist_m.jpg);
     background-repeat: no-repeat;
 }
 
 #alt_form_section{
-    position: absolute;
-    top: -8px;
-    right: 60px;
-    width: 350px;
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
     z-index: 105;
 }
 
@@ -363,9 +373,9 @@ b {font-weight: bold;}
 }
 
 #alt_title_area h1 {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
-    text-indent: 90px;
+    text-indent: 20px;
     line-height: 100px;
 }
 
@@ -382,8 +392,9 @@ b {font-weight: bold;}
 
 #alt_content_contain{
     position: relative;
-    width: 550px;
-    margin: 40px 0px 40px 90px; 
+    width: 100%;
+    margin: 40px 0px 40px 0px; 
+    text-align: left;
 }
 
 #alt_content_contain p{
@@ -394,16 +405,16 @@ b {font-weight: bold;}
 
 #alt_footer{
     position: relative;
-    width: 1149px;
+    width: 100%;
     margin: 0px auto 20px auto;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.0em;
 }
 
 #alt_footer p{
     font-size: 1em;
     line-height: 1.3em;
-    margin-bottom: 35px;
+    margin: 0px 20px 35px 20px;
 }
 
 #alt_footer a{
@@ -419,7 +430,7 @@ b {font-weight: bold;}
     font-size: .7em !important;
     line-height: 1.3em;
     text-align: left;
-    padding: 0px 0px 0px 90px;
+    padding: 0px 0px 0px 20px;
     margin: 0px 0px 10px 0px !important;
 }
 
@@ -428,3 +439,10 @@ b {font-weight: bold;}
     font-size: 1.3em;
     line-height: 1.5em;
 }
+
+.form_foot{display: none;}
+
+#joe_bare_form_row{margin: 0px 0px 5px 0px !important;}
+#joe_bare_form_row input, #joe_bare_form_select {margin-left: 20px;}
+
+#joe_bare_form_row #submit{margin: 0px 0px 0px 20px;}

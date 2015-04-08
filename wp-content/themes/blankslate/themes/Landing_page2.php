@@ -26,7 +26,7 @@ get_header(); ?>
 <div id="site_container">
             <div id="logo_area">
                 <div id="site_contain">
-                    <img src="/wp-content/themes/blankslate/images/logo.png" width="214" height="54" class="logo"><img src="/wp-content/themes/blankslate/images/medical_assistant_text.jpg" width="196" height="58" class="drug_text">
+                    <img src="/wp-content/themes/blankslate/images/logo.png" class="logo"><img src="/wp-content/themes/blankslate/images/medical_assistant_text.jpg" width="196" height="58" class="drug_text">
                     <div id="aboutUs_btn">About Us</div>
                     <div id="phone_area">
                         <div id="phone_area_m">
@@ -35,7 +35,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <div id="alt_hero_area"></div>
+    <div id="alt_hero_area"><?php if(USER_DEVICE == 'PHONE'){?><img src="/wp-content/themes/blankslate/images/hdr_medical_assist_m.jpg" class="alt_hero_img"><?php } ?></div>
             <div id="alt_site_contain">
                 <div id="alt_form_section"><?php echo do_shortcode( '[bare_form]' ); ?><img src="/wp-content/themes/blankslate/images/form_foot.gif" class="form_foot"></div>   
                 <div id="alt_title_area">
