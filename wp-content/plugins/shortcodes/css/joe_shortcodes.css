@@ -346,7 +346,7 @@ b {font-weight: bold;}
 }
 
 #alt_footer .address{
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1.3em;
     line-height: 1.5em;
 }
