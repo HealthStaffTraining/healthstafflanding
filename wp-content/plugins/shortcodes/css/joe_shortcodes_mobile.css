@@ -329,7 +329,7 @@ b {font-weight: bold;}
     margin: 0px auto 0px auto;
 }
 
-#alt_hero_area{
+#alt_hero_area, #alt_hero_area_drug, #alt_hero_area_computer{
     width:100%; 
     position: relative;
     margin: 0px auto 0px auto;
