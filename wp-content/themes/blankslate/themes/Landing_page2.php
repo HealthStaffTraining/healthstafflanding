@@ -55,13 +55,15 @@ get_header(); ?>
                             </div>
             </div>
             <div id="alt_footer">
-                <p class="smallprint">At Florida Vocational Institute, you’ll receive a comprehensive education in a supportive environment. Come explore the world of health care by pursuing a Medical Assistant career by training with us!</p>
-                <p class="smallprint" style="padding-bottom: 50px;">For more information about our Medical Assistant program, call toll free  1-855-408-8400 or fill out the short form.</p>
-                <p><span class="blue">Start Training Today!</span><br>Simply fill out the form. Ready to start now? Call us at 305-665-1911</p>
+                <!--<p class="smallprint">At HealthStaff Training Institute, we strive to make your educational experience a positive one. We are committed to excellence in education.</p>
+                <p class="smallprint" style="padding-bottom: 50px;">For more information about our Computerized Office & Accounting program, call today to create your new tomorrow  1-855-408-8400 or fill out the short form.</p>
+                -->
+                <p><span class="blue">Start Training Today!</span><br>Simply fill out the form. Ready to start now? Call us at 951.694.4784</p>
                 <p><u><a href="/about-us">About Us</a></u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u><a href="/privacy">Privacy Policy</a></u></p>
-                <p class="address">7757 West Flagler Street, Suite 220<br>Miami, FL 33144</p>
-                <p>Phone 305-665-1911&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax 305-665-1911</p>
-                <p class="smallprint" style="text-align: center;">For more information on graduation rates, median debt of graduates completing these programs, and other important information, visit http://fvi.edu/disclosure/<br><br>Copyright ©2015  Florida Vocational Institute.</p>
+                <p class="address"><b>Riverside Location</b><br>28671 Calle Cortez, Suite F<br>Temecula, CA 92590</p>
+                <p class="address"><b>San Bernardino Location</b><br>601 S. Milliken Avenue, Suite A<br>Ontario, CA 91761</p>
+                <p class="address"><b>Orange County Location</b><br>1970 Old Tustin Road, Suite C<br>Santa Ana, CA 92705</p>
+                <p class="smallprint" style="text-align: center;">Copyright ©2015 Health Staff Training</p>
 
             </div>
 <!-- ?php get_sidebar(); ?-->
