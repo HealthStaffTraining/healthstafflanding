@@ -61,7 +61,7 @@ get_header(); ?>
                 <p><span class="blue">Start Training Today!</span><br>Simply fill out the form. Ready to start now? Call us at 951.694.4784</p>
                 <p><u><a href="/about-us">About Us</a></u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u><a href="/privacy">Privacy Policy</a></u></p>
                 <p class="address"><b>Riverside County Location</b><br>28671 Calle Cortez, Suite F<br>Temecula, CA 92590</p>
-                <p class="address"><b>San County Bernardino Location</b><br>601 S. Milliken Avenue, Suite A<br>Ontario, CA 91761</p>
+                <p class="address"><b>San Bernardino County Location</b><br>601 S. Milliken Avenue, Suite A<br>Ontario, CA 91761</p>
                 <p class="address"><b>Orange County Location</b><br>1970 Old Tustin Road, Suite C<br>Santa Ana, CA 92705</p>
                 <p class="smallprint" style="text-align: center;">Copyright ©2015 Health Staff Training</p>
 
