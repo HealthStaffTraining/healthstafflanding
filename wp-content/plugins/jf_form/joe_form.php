@@ -92,6 +92,49 @@ function form_cgi($args = array()){
                                         '%s'
 				)
 			);
+                        
+                        // populate the array with the values to be posted
+                        /*
+                        $postfields = array();
+                        $postfields['firstName'] = urlencode($_POST['firstName']);
+                        $postfields['lastName'] = urlencode($_POST['lastName']);
+                        $postfields['email'] = urlencode($_POST['email']);
+                        $postfields['phone'] = urlencode($_POST['phone']);
+                        $postfields['ddlprogram'] = urlencode($_POST['ddlprogram']);
+                        $postfields['program'] = urlencode($program_description);
+                        */
+                        $postfields = array(
+                                'firstName' => urlencode($_POST['firstName']),
+                                'lastName' => urlencode($_POST['lastName']),
+                                'email' => urlencode($_POST['email']),
+                                'phone' => urlencode($_POST['phone']),
+                                'ddlprogram' => urlencode($_POST['ddlprogram'])
+                        );
+
+                        // Initialize your cURL session
+                        $ch = curl_init();
+
+                        // Follow any Location headers
+                        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+
+                        // tell cURL what file to open
+                        curl_setopt($ch, CURLOPT_URL, 'https://secure.velocify.com/Import.aspx?Provider=Nuovometo&Client=HealthstaffTrainingInstitute&CampaignId=1042');
+                        // tell cURL to populate the $ch variable with resutls
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+                        // Alert cURL to the fact that we're doing a POST, and pass the associative array for POSTing
+                        curl_setopt($ch, CURLOPT_POST, 1);
+
+                        // Post your values to the opened script
+                        curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+
+                        // Execute your cURL script
+                        //$output = curl_exec($ch);
+                        // Free system resources taken by cURL
+                        curl_close($ch);
+
+                        //print $output;
+                        
 			$insert_id = $wpdb->insert_id;
                         $to = 'kim.e@healthstafftraining.com, ebrodie@nuovometo.com, jfitzgerald@nuovometo.com';
                         $subject = 'A lead has been captured';
