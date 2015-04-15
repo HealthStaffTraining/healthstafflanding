@@ -129,7 +129,7 @@ function form_cgi($args = array()){
                         curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
 
                         // Execute your cURL script
-                        //$output = curl_exec($ch);
+                        $output = curl_exec($ch);
                         // Free system resources taken by cURL
                         curl_close($ch);
 
