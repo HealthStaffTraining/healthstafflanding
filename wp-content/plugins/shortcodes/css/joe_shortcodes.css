@@ -265,6 +265,18 @@ h2 {color:#92cd1a;font-weight: bold; font-size: 1.3em; margin: 0px 0px 20px 0px;
     border-width: 2px 0px 0px 0px;
 }
 
+#alt_hero_area_pharmacy{
+    width:1149px;
+    position: relative;
+    margin: 0px auto 0px auto;
+    height:288px;
+    background-image: url(../../../themes/blankslate/images/hdr_pharmacy_tech.jpg);
+    background-repeat: no-repeat;
+    border-color: #f1f1f1;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+}
+
 #alt_hero_img{
     position: relative;
     width: 1149px;
