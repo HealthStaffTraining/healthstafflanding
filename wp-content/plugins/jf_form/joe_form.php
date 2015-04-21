@@ -104,11 +104,11 @@ function form_cgi($args = array()){
                         $postfields['program'] = urlencode($program_description);
                         */
                         $postfields = array(
-                                'firstName' => urlencode($_POST['firstName']),
-                                'lastName' => urlencode($_POST['lastName']),
-                                'email' => urlencode($_POST['email']),
-                                'phone' => urlencode($_POST['phone']),
-                                'ddlprogram' => urlencode($_POST['ddlprogram'])
+                                'firstName' => $_POST['firstName'],
+                                'lastName' => $_POST['lastName'],
+                                'email' => $_POST['email'],
+                                'phone' => $_POST['phone'],
+                                'ddlprogram' => $_POST['ddlprogram']
                         );
 
                         // Initialize your cURL session
