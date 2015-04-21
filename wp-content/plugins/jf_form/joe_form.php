@@ -144,6 +144,7 @@ function form_cgi($args = array()){
                         $message.= 'Email Address: '.$_POST['email'].'<br>';
                         $message.= 'Phone Number: '.$_POST['phone'].'<br>';
                         $message.= 'Program: ('.$_POST['ddlprogram'].') '.$program_description.'<br>';
+                        $message.= "<hr>".$output;
                         $headers  = 'MIME-Version: 1.0' . "\r\n";
                         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                         $headers .= 'From: webmaster@healthstafftraining.com' . "\r\n" .
