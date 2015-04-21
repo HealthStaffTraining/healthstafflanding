@@ -54,6 +54,32 @@ function bare_form($args = array()){
 	return ob_get_clean();
 }
 
+add_shortcod('jf_tracking','jf_tracking');
+function jf_tracking($args = array()){
+    ob_start();
+    ?>
+    <!-- Google Code for Form Fill Conversion One Per User Conversion Page -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 968958676;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "KDZ9CJrlwlsQ1MWEzgM";
+        var google_remarketing_only = false;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;" rel="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/968958676/?label=KDZ9CJrlwlsQ1MWEzgM&amp;guid=ON&amp;script=0"/>
+        </div>
+    </noscript>
+    <?php
+    return ob_get_clean();
+}
+
 add_shortcode('form_cgi', 'form_cgi');
 function form_cgi($args = array()){
     $joe_form = new joe_form();  
