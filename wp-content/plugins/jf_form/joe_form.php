@@ -54,7 +54,7 @@ function bare_form($args = array()){
 	return ob_get_clean();
 }
 
-add_shortcod('jf_tracking','jf_tracking');
+add_shortcode('jf_tracking','jf_tracking');
 function jf_tracking($args = array()){
     ob_start();
     ?>
