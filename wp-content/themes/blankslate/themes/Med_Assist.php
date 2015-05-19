@@ -39,7 +39,7 @@ get_header(); ?>
             <div id="alt_site_contain">
                 <div id="alt_form_section"><?php echo do_shortcode( '[bare_form]' ); ?><img src="/wp-content/themes/blankslate/images/form_foot.gif" class="form_foot"></div>   
                 <div id="alt_title_area">
-                    <h1><?php the_title(); ?></h1>
+                    <h1 style="white-space: nowrap;"><?php the_title(); ?></h1>
                 </div>
             </div>
             <div id="alt_site_contain">
