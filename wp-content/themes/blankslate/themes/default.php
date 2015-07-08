@@ -11,7 +11,7 @@ get_header(); ?>
                     <a href="/"><img src="/wp-content/themes/blankslate/images/logo.png" width="214" height="54" class="logo"></a><img src="/wp-content/themes/blankslate/images/drug_text.png" width="196" height="58" class="drug_text">
                     <div id="phone_area">
                         <div id="phone_area_m">
-                        Phone<br><span class="phone_number">951-694-4784</span>
+                        Phone<br><span class="phone_number"><span class="rTapNumber181523">(951)-694-4784</span></span>
                         </div>
                     </div>
                 </div>

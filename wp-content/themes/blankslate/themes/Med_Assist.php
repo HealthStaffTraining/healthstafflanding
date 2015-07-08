@@ -30,7 +30,7 @@ get_header(); ?>
                     <div id="aboutUs_btn">About Us</div>
                     <div id="phone_area">
                         <div id="phone_area_m">
-                        Phone<br><span class="phone_number">951-694-4784</span>
+                        Phone<br><span class="phone_number"><span class="rTapNumber181523">(951)-694-4784</span></span>
                         </div>
                     </div>
                 </div>
